@@ -27,3 +27,8 @@ div = soup.select('div')
 mat = soup.select('p.class')
 print(mat)
 
+dclas = soup.select('div')
+
+for item in dclas:
+    print(item.text)
+
