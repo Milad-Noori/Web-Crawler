@@ -1,7 +1,7 @@
 import requests
 from pyexpat import features
 
-r = requests.get("https://testinno.ir/toefl")
+r = requests.get("https://en.wikipedia.org/wiki/Python_(programming_language)")
 # print(r)
 # print(type(r))
 # print(r.text)
@@ -24,11 +24,39 @@ div = soup.select('div')
 
 
 
-mat = soup.select('p.class')
-print(mat)
+# mat = soup.select('p.class')
+# print(mat)
+# 
+# dclas = soup.select('div')
+# 
+# for item in dclas:
+#     print(item.text)
 
-dclas = soup.select('div')
 
-for item in dclas:
-    print(item.text)
+
+# ----------------------------------------------------------------------------------------
+import json
+
+api_url = "http://api.open-notify.org/iss-now.json"
+
+response = requests.get(api_url)
+
+print(response)
+print(response.text)
+# print(response.json())
+jason_data  = response.json()
+print(jason_data)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
