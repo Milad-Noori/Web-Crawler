@@ -17,8 +17,13 @@ ti = soup.select("title")
 
 div = soup.select('div')
 # print(div)
-print(len(div))
+# print(len(div))
 
-for item in soup.select('div'):
-    print(item.text)
+# for item in soup.select('div'):
+#     print(item.text)
+
+
+
+mat = soup.select('p.class')
+print(mat)
 
