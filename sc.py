@@ -37,15 +37,48 @@ div = soup.select('div')
 # ----------------------------------------------------------------------------------------
 import json
 
-api_url = "http://api.open-notify.org/iss-now.json"
+# api_url = "http://api.open-notify.org/iss-now.json"
+#
+# response = requests.get(api_url)
+#
+# print(response)
+# print(response.text)
+# # print(response.json())
+# jason_data  = response.json()
+# print(jason_data)
+#
 
-response = requests.get(api_url)
+# ------------------------------------------------------------------------------------------
 
-print(response)
-print(response.text)
-# print(response.json())
-jason_data  = response.json()
-print(jason_data)
+
+# url_api = ""
+# data= requests.get(url_api)
+# print(data)
+# text = data.text
+# print(text)
+
+# __________________________________________________________FlASK________________________________
+from flask import Flask
+
+app = Flask(__name__)
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
+if __name__== 'main':
+    app.run()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
