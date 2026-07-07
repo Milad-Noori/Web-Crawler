@@ -1,21 +1,21 @@
 import requests
 from pyexpat import features
 
-r = requests.get("https://en.wikipedia.org/wiki/Python_(programming_language)")
+# r = requests.get("https://en.wikipedia.org/wiki/Python_(programming_language)")
 # print(r)
 # print(type(r))
 # print(r.text)
 # data = 'history' in r.text
 # print(data)
-import bs4
-data = r.text
-soup = bs4.BeautifulSoup(data,'html.parser')
+# import bs4
+# data = r.text
+# soup = bs4.BeautifulSoup(data,'html.parser')
 # print(soup)
-ti = soup.select("title")
+# ti = soup.select("title")
 # print (ti)
 # print(type(ti))
 
-div = soup.select('div')
+# div = soup.select('div')
 # print(div)
 # print(len(div))
 
@@ -64,6 +64,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return 'Hello, World!'
+
+@app.route('/about')
+def about():
+    return "this page is about"
 
 if __name__== 'main':
     app.run()
