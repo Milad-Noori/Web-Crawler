@@ -58,20 +58,25 @@ import json
 # print(text)
 
 # __________________________________________________________FlASK________________________________
-from flask import Flask
+# from flask import Flask
+#
+# app = Flask(__name__)
+# @app.route('/')
+# def home():
+#     return 'Hello, World!'
+#
+# @app.route('/about')
+# def about():
+#     return "this page is about"
+#
+# if __name__== 'main':
+#     app.run()
 
-app = Flask(__name__)
-@app.route('/')
-def home():
-    return 'Hello, World!'
 
-@app.route('/about')
-def about():
-    return "this page is about"
 
-if __name__== 'main':
-    app.run()
-
+link = requests.get("https://api.attackontitanapi.com/episodes")
+print(link)
+print(link.text)
 
 
 
