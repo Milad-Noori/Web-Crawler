@@ -1,3 +1,4 @@
+import bs4
 import requests
 from pyexpat import features
 
@@ -77,10 +78,13 @@ import json
 link = requests.get("https://api.attackontitanapi.com/episodes")
 print(link)
 print(link.text)
+info = link.text
 
+soup = bs4.BeautifulSoup("data", 'html.parser')
 
+ti  = soup.select("tittle")
 
-
+print(ti)
 
 
 
