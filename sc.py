@@ -76,20 +76,32 @@ import json
 #     app.run()
 
 
+#
+# link = requests.get("https://api.attackontitanapi.com/episodes")
+# print(link)
+# # print(link.text)
+# info = link.text
+#
+# soup = bs4.BeautifulSoup("data", 'html.parser')
+#
+# ti  = soup.select("tittle")
+# print(ti)
+# # print(soup)
+# div = soup.select("div")
+# print(div)
 
-link = requests.get("https://api.attackontitanapi.com/episodes")
-print(link)
-# print(link.text)
-info = link.text
 
-soup = bs4.BeautifulSoup("data", 'html.parser')
 
-ti  = soup.select("tittle")
-print(ti)
-# print(soup)
-div = soup.select("div")
-print(div)
+# ---------------------------------------------openai+new api ------------------------------------------
 
+from openai import OpenAI
+
+model =OpenAI (
+    bas_url ='https://api.avalai.ir/v1 ',
+    api_token =
+
+
+)
 
 
 
