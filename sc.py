@@ -95,18 +95,22 @@ import json
 # ---------------------------------------------openai+new api ------------------------------------------
 
 from openai import OpenAI
+from openai.types.admin.organization.projects.service_account_create_response import APIKey
 
-model =OpenAI (
-    bas_url ='https://api.avalai.ir/v1 ',
-    api_token =
+clinet =OpenAI(
+    base_url= 'https://api.avalai.ir/v1 ',
+    api_key ='aa-EMGI2BcY5zthBtcCqAcMze3HbwSZKhwQFF7Hi8ASzULkJEmu'
 
+)
+audio_file = open("",'rb')
+transcription = clinet.audio.transcriptions.create(
+    model="gpt-4o-mini-transcribe",
+    file = audio_file,
+    response_format="text"
 
 )
 
-
-
-
-
+print(transcription)
 
 
 
